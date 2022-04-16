@@ -1,3 +1,5 @@
+export {}
+
 test ('old men only',()=>{
     const ages = [10,20,22,1,100,90,14];
 

@@ -4,11 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {sentence, splitIntoWords} from "./01-hello-tests/01";
+import {User} from "./06/06-callbacks";
 
 const result = splitIntoWords(sentence)
 console.log(result)
 
-ReactDOM.render(<App />, document.getElementById('root')
+ReactDOM.render(<User />, document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

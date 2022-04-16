@@ -1,6 +1,7 @@
 import {getStreets, getStreetsTitles, ManType} from "./05";
-import { CityType} from "./02_02";
-import {housesToDestroy, stuffGreaterThen} from "./04_02";
+import {CityType} from "../02/02_02";
+/*import { CityType} from "./02_02";
+import {housesToDestroy, stuffGreaterThen} from "./04_02";*/
 
 let people: Array<ManType> = []
 
