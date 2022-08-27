@@ -1,21 +1,21 @@
 export {}
 
-const increaseAge = (u:UserType) => {
+const increaseAge = (u: UserType) => {
     u.age++;
 }
 
 type UserType = {
     name: string
     age: number
-    address: {title: string}
+    address: { title: string }
 }
 
-test.skip('reference type test', () =>{
+test.skip('reference type test', () => {
 
     let user = {
         name: 'Dmitriy',
         age: 28,
-        address:{
+        address: {
             title: 'SPb'
         }
     }
@@ -26,18 +26,18 @@ test.skip('reference type test', () =>{
 
     const superman = user;
 
-    superman.age=1000
+    superman.age = 1000
 
     expect(user.age).toBe(1000)
 })
 
-test('array test', () =>{
+test('array test', () => {
 
     let users = [
         {
-        name: 'Dmitriy',
-        age: 28
-    },
+            name: 'Dmitriy',
+            age: 28
+        },
         {
             name: 'Dmitriy',
             age: 28
@@ -46,25 +46,25 @@ test('array test', () =>{
 
     const admins = users;
 
-    admins.push({name:'1b', age: 10})
+    admins.push({name: '1b', age: 10})
 
 
-    expect(users[2]).toEqual({name:'1b', age: 10})
+    expect(users[2]).toEqual({name: '1b', age: 10})
 })
 
-test.skip('value type  test', () =>{
+test.skip('value type  test', () => {
 
-    let usersCount= 100;
+    let usersCount = 100;
 
     let adminsCount = usersCount;
 
     adminsCount = 101
 
 
-    expect(users[2]).toEqual({name:'1b', age: 10})
+    expect(users[2]).toEqual({name: '1b', age: 10})
 })
 
-test('reference type test', () =>{
+test('reference type test', () => {
 
     const address = {
         title: 'SPb'
@@ -73,10 +73,10 @@ test('reference type test', () =>{
     let user = {
         name: 'Dmitriy',
         age: 28,
-        address:address
+        address: address
     }
 
-  // let addr = user.address
+    // let addr = user.address
 
     const user2: UserType = {
         name: 'Oksana',
@@ -90,7 +90,7 @@ test('reference type test', () =>{
     expect(user.address).toBe(user2.address)
 })
 
-test('reference type array test', () =>{
+test('reference type array test', () => {
 
     const address = {
         title: 'SPb'
@@ -99,7 +99,7 @@ test('reference type array test', () =>{
     let user = {
         name: 'Dmitriy',
         age: 28,
-        address:address
+        address: address
     }
 
     // let addr = user.address
@@ -110,9 +110,9 @@ test('reference type array test', () =>{
         address: address
     }
 
-    const users = [user, user2, {name:'3', age: 3, address: address}]
+    const users = [user, user2, {name: '3', age: 3, address: address}]
 
-   const admins = [user, user2]
+    const admins = [user, user2]
 
     admins[0].name = 'Dima'
 
@@ -120,10 +120,10 @@ test('reference type array test', () =>{
     expect(user.name).toBe('Dima')
 })
 
-test('sort array test', () =>{
+test('sort array test', () => {
 
     const letters = ['c', 'd', 'a', 'z', 'e']
     letters.sort();
 
-    expect(letters).toEqual(['a','c', 'd', 'e', 'z'])
+    expect(letters).toEqual(['a', 'c', 'd', 'e', 'z'])
 })

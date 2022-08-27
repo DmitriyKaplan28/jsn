@@ -11,29 +11,28 @@ import {
 } from "./10_01";
 
 
-
-test ('reference type test', () => {
+test('reference type test', () => {
     let user: UserType = {
         name: 'Dmitriy',
         hair: 28,
-        address: {city:'SPb', house: 32},
+        address: {city: 'SPb', house: 32},
     }
 
-    const awesomeUser= makeHairStyle(user, 2)
+    const awesomeUser = makeHairStyle(user, 2)
 
     expect(user.hair).toBe(28)
     expect(awesomeUser.hair).toBe(14)
     expect(awesomeUser.address).toBe(user.address)
 })
-test ('change address', () => {
+test('change address', () => {
     let user: UserWithLaptopType = {
         name: 'Dmitriy',
         hair: 28,
-        address: {city:'SPb', house: 32},
-        laptop: { title: 'ZenBook'}
+        address: {city: 'SPb', house: 32},
+        laptop: {title: 'ZenBook'}
     }
 
-    const movedUser= moveUser(user, 'Moscow')
+    const movedUser = moveUser(user, 'Moscow')
 
 
     expect(movedUser).not.toBe(user)
@@ -41,15 +40,15 @@ test ('change address', () => {
     expect(movedUser.address.city).toBe('Moscow')
     expect(movedUser.laptop).toBe(user.laptop)
 })
-test ('upgrade laptop to Macbook', () => {
+test('upgrade laptop to Macbook', () => {
     let user: UserWithLaptopType = {
         name: 'Dmitriy',
         hair: 28,
-        address: {city:'SPb', house: 32},
-        laptop: { title: 'ZenBook'}
+        address: {city: 'SPb', house: 32},
+        laptop: {title: 'ZenBook'}
     }
 
-    const userWithMacbook= upgradeUserLaptop(user, 'Macbook')
+    const userWithMacbook = upgradeUserLaptop(user, 'Macbook')
 
 
     expect(userWithMacbook).not.toBe(user)
@@ -59,16 +58,16 @@ test ('upgrade laptop to Macbook', () => {
     expect(userWithMacbook.address).toBe(user.address)
 })
 
-test ('Other House', () => {
+test('Other House', () => {
     let user: UserWithLaptopType & UserWithBooksType = {
         name: 'Dmitriy',
         hair: 28,
-        address: {city:'SPb', house: 32},
-        laptop: { title: 'ZenBook'},
-        books:['css', 'html', 'js', 'react'],
+        address: {city: 'SPb', house: 32},
+        laptop: {title: 'ZenBook'},
+        books: ['css', 'html', 'js', 'react'],
     }
 
-    const userCopy= moveUserToOtherHouse(user, 34)
+    const userCopy = moveUserToOtherHouse(user, 34)
 
 
     expect(userCopy).not.toBe(user)
@@ -78,13 +77,13 @@ test ('Other House', () => {
     expect(userCopy.address.house).toBe(34)
 })
 
-test ('add new books', () => {
+test('add new books', () => {
     let user: UserWithLaptopType & UserWithBooksType = {
         name: 'Dmitriy',
         hair: 28,
-        address: {city:'SPb', house: 32},
-        laptop: { title: 'ZenBook'},
-        books:['css', 'html', 'js', 'react'],
+        address: {city: 'SPb', house: 32},
+        laptop: {title: 'ZenBook'},
+        books: ['css', 'html', 'js', 'react'],
     }
 
     const userCopy = addNewBooksToUser(user, ['ts', 'rest api'])
@@ -100,16 +99,16 @@ test ('add new books', () => {
 
 })
 
-test ('change one book', () => {
+test('change one book', () => {
     let user: UserWithLaptopType & UserWithBooksType = {
         name: 'Dmitriy',
         hair: 28,
-        address: {city:'SPb', house: 32},
-        laptop: { title: 'ZenBook'},
-        books:['css', 'html', 'js', 'react'],
+        address: {city: 'SPb', house: 32},
+        laptop: {title: 'ZenBook'},
+        books: ['css', 'html', 'js', 'react'],
     }
 
-    const userCopy = updateBook (user,'js', 'ts',)
+    const userCopy = updateBook(user, 'js', 'ts',)
 
 
     expect(userCopy).not.toBe(user)
@@ -120,16 +119,16 @@ test ('change one book', () => {
     expect(user.books.length).toBe(4)
 })
 
-test ('remove book', () => {
+test('remove book', () => {
     let user: UserWithLaptopType & UserWithBooksType = {
         name: 'Dmitriy',
         hair: 28,
-        address: {city:'SPb', house: 32},
-        laptop: { title: 'ZenBook'},
-        books:['css', 'html', 'js', 'react'],
+        address: {city: 'SPb', house: 32},
+        laptop: {title: 'ZenBook'},
+        books: ['css', 'html', 'js', 'react'],
     }
 
-    const userCopy = removeBook (user,'js')
+    const userCopy = removeBook(user, 'js')
 
 
     expect(userCopy).not.toBe(user)
@@ -140,16 +139,16 @@ test ('remove book', () => {
     expect(userCopy.books.length).toBe(3)
 })
 
-test ('add company', () => {
+test('add company', () => {
     let user: UserWithLaptopType & WithCompaniesType = {
         name: 'Dmitriy',
         hair: 28,
-        address: {city:'SPb', house: 32},
-        laptop: { title: 'ZenBook'},
+        address: {city: 'SPb', house: 32},
+        laptop: {title: 'ZenBook'},
         companies: [{id: 1, title: 'Epam'}, {id: 2, title: 'Inc'}]
     }
 
-    const userCopy = addCompany (user, {id:3, title: 'google'})
+    const userCopy = addCompany(user, {id: 3, title: 'google'})
 
 
     expect(userCopy).not.toBe(user)
@@ -160,16 +159,16 @@ test ('add company', () => {
     expect(userCopy.companies[2].title).toBe('google')
 })
 
-test ('update company', () => {
+test('update company', () => {
     let user: UserWithLaptopType & WithCompaniesType = {
         name: 'Dmitriy',
         hair: 28,
-        address: {city:'SPb', house: 32},
-        laptop: { title: 'ZenBook'},
+        address: {city: 'SPb', house: 32},
+        laptop: {title: 'ZenBook'},
         companies: [{id: 1, title: 'Eпam'}, {id: 2, title: 'Inc'}]
     }
 
-    const userCopy = updateCompany (user, 1, 'Epam')
+    const userCopy = updateCompany(user, 1, 'Epam')
 
 
     expect(userCopy).not.toBe(user)
@@ -178,15 +177,15 @@ test ('update company', () => {
     expect(userCopy.companies[0].title).toBe('Epam')
 })
 
-test ('update company 2', () => {
+test('update company 2', () => {
 
-let companies ={
+    let companies = {
         'Dmitriy': [{id: 1, title: 'Egam'}, {id: 2, title: 'Inc'}],
         'name2': [{id: 2, title: 'Inc'}],
-}
+    }
 
 
-    const copy = updateCompany2 (companies, 'Dmitriy', 1,'Epam')
+    const copy = updateCompany2(companies, 'Dmitriy', 1, 'Epam')
 
 
     expect(copy['Dmitriy']).not.toBe(companies['Dmitriy'])
