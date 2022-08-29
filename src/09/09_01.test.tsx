@@ -61,7 +61,7 @@ test.skip('value type  test', () => {
     adminsCount = 101
 
 
-    expect(users[2]).toEqual({name: '1b', age: 10})
+    //expect(users[2]).toEqual({name: '1b', age: 10})
 })
 
 test('reference type test', () => {
