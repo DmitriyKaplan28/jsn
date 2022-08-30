@@ -76,8 +76,6 @@ test('reference type test', () => {
         address: address
     }
 
-    // let addr = user.address
-
     const user2: UserType = {
         name: 'Oksana',
         age: 30,
