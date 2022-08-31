@@ -1,18 +1,9 @@
 import React, {ChangeEvent, MouseEvent} from 'react'
 
-/*
-const callback = (): number => {
-    alert('hey')
-    return 12;
-}
-window.setTimeout(callback, 1000)
-*/
-
-
 export const User = () => {
 
     const search = (event: MouseEvent<HTMLButtonElement>) => {
-        
+
     }
 
 

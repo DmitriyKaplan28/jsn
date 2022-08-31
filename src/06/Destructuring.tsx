@@ -15,7 +15,7 @@ type PropsType = {
     title: string
     man: ManType
     food: Array<string>
-    car: {model: string}
+    car: { model: string }
 }
 
 const ManComponent: React.FC<PropsType> = (props) => {
