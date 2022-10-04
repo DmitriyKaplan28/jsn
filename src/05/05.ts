@@ -11,7 +11,6 @@ const people: Array<ManType> = [
     {name: "Dmitry Sidorov", age: 18}
 ]
 
-
 const dimychTransformator = (man:ManType) => ({
         stack: ["css, html","js", "tdd", "react"],
         firstName: man.name.split(" ")[0],
