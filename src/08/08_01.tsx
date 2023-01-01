@@ -10,8 +10,3 @@ export const usersObj = {
     '3': 'd'
 }
 
-/*
-
-let user = {id: 123, name:'f'}
-users[user.id]= user;
-delete users[user.id];*/
