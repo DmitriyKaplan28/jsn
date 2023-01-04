@@ -8,4 +8,3 @@ export const usersObj = {
     '2': 'c',
     '3': 'd'
 }
-
