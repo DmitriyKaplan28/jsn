@@ -6,7 +6,6 @@ export const User = () => {
 
     }
 
-
     const onNameChanged = () => {
         console.log('name changed')
     }
