@@ -23,6 +23,5 @@ export const User = () => {
         <input onChange={onAgeChanged} type={"number"}/>
 
         <button name='delete' onClick={search}>search</button>
-
     </div>
 }
