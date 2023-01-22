@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const usersArray = ['a', 'b', 'c', 'd']
 
 export const usersObj = {
