@@ -2,6 +2,7 @@ import {StudentType} from "../02/02";
 import {addSkill, makeStudentActive, studentCIty} from "./03";
 
 let student: StudentType
+
 beforeEach(()=>{
     student = {
         id: 1,
