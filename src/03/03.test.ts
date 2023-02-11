@@ -3,14 +3,14 @@ import {addSkill, makeStudentActive, studentCIty} from "./03";
 
 let student: StudentType
 
-beforeEach(()=>{
+beforeEach(() => {
     student = {
         id: 1,
         name: 'Dmitriy',
         age: 28,
         isActive: false,
         address: {
-            streetTitle:"Lenina",
+            streetTitle: "Lenina",
             city: {
                 title: "SPb",
                 countryTitle: "RF"
@@ -35,29 +35,29 @@ beforeEach(()=>{
 
 
 test('skill is added', () => {
-    expect (student.technologies.length).toBe(3);
-    addSkill(student,'JS');
+        expect(student.technologies.length).toBe(3);
+        addSkill(student, 'JS');
 
-    expect (student.technologies.length).toBe(4);
-    expect (student.technologies[3].title).toBe('JS');
-    expect (student.technologies[3].id).toBeDefined();
+        expect(student.technologies.length).toBe(4);
+        expect(student.technologies[3].title).toBe('JS');
+        expect(student.technologies[3].id).toBeDefined();
     }
 )
 test('student should be active', () => {
-    expect (student.isActive).toBe(false);
+        expect(student.isActive).toBe(false);
 
-    makeStudentActive(student);
+        makeStudentActive(student);
 
-    expect (student.isActive).toBe(true);
+        expect(student.isActive).toBe(true);
     }
 )
 test('does student live in city?', () => {
 
 
-        let res1 = studentCIty(student,'Moscow');
-        let res2 = studentCIty(student,'SPb');
+        let res1 = studentCIty(student, 'Moscow');
+        let res2 = studentCIty(student, 'SPb');
 
-        expect (res1).toBe(false);
-        expect (res2).toBe(true);
+        expect(res1).toBe(false);
+        expect(res2).toBe(true);
     }
 )
