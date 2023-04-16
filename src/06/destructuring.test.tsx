@@ -16,15 +16,12 @@ beforeEach(() => {
 })
 
 test('', () => {
-
-
     const {age, lessons} = props;
     const {title} = props.address.street
 
     expect(age).toBe(28);
     expect(lessons.length).toBe(3);
     expect(title).toBe("Novoizmailovskiy pr");
-
 })
 
 test('', () => {

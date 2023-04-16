@@ -33,7 +33,6 @@ beforeEach(() => {
     }
 })
 
-
 test('skill is added', () => {
         expect(student.technologies.length).toBe(3);
         addSkill(student, 'JS');
