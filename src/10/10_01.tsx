@@ -19,6 +19,7 @@ export type WithCompaniesType = {
     companies: Array<{ id: number, title: string }>
 }
 
+
 export function makeHairStyle(u: UserType, power: number) {
     return {
         ...u,
