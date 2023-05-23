@@ -3,17 +3,14 @@ import React, {ChangeEvent, MouseEvent} from 'react'
 export const User = () => {
 
     const search = (event: MouseEvent<HTMLButtonElement>) => {
-
     }
 
     const onNameChanged = () => {
         console.log('name changed')
     }
-
     const onAgeChanged = (event: ChangeEvent<HTMLInputElement>) => {
         console.log('age changed' + event.currentTarget.value)
     }
-
     const focusLostHandler = () => {
         console.log('focus lost')
     }
