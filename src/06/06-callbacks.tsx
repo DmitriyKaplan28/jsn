@@ -4,7 +4,6 @@ export const User = () => {
 
     const search = (event: MouseEvent<HTMLButtonElement>) => {
     }
-
     const onNameChanged = () => {
         console.log('name changed')
     }
