@@ -1,7 +1,6 @@
 import React, {ChangeEvent, MouseEvent} from 'react'
 
 export const User = () => {
-
     const search = (event: MouseEvent<HTMLButtonElement>) => {
     }
     const onNameChanged = () => {
@@ -13,7 +12,6 @@ export const User = () => {
     const focusLostHandler = () => {
         console.log('focus lost')
     }
-
     return <div>
         <textarea onChange={onNameChanged} onBlur={focusLostHandler}>Dimych</textarea>
         <input onChange={onAgeChanged} type={"number"}/>
